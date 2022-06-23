@@ -1,18 +1,15 @@
 import React from "react";
-import { TotalSoldLastYear } from "./Component/TotalSoldLastYear";
-import { UnitPrice } from "./Component/UnitPrice";
-import { TotalSales } from "./Component/TotalSales";
+import { Inicio } from "./Component/Inicio";
+
 //import logo from './logo.svg';
 //import './App.css';
-import './Component/TotalSales.css'
+//import './Component/TotalSales.css'
 
 function App() {
   return (
     <React.Fragment>
       <h1>PASO 1: VENTAS ANUALES ¿cuánto vas a vender en el año?</h1>
-      <TotalSales />
-      <UnitPrice />
-      <TotalSoldLastYear />
+      <Inicio />
     </React.Fragment>
   );
 }
