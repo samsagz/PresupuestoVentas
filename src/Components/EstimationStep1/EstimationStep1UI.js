@@ -1,7 +1,7 @@
 import React from "react";
+import "./EstimationStep1.css"
 
-function EstimationStep1UI() {
-
+function EstimationStep1UI({tableResult}) {
     return (
         <React.Fragment>
             <table>
@@ -19,62 +19,16 @@ function EstimationStep1UI() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Lo que quiero</td>
-                        <td>hola1</td>
-                        <td>hola1</td>
-                        <td>hola1</td>
-                        <td>hola1</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Lo que creo</td>
-                        <td>hola2</td>
-                        <td>hola2</td>
-                        <td>hola2</td>
-                        <td>hola2</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Escenarios</td>
-                        <td>hola3</td>
-                        <td>hola3</td>
-                        <td>hola3</td>
-                        <td>hola3</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Detalle por cliente</td>
-                        <td>hola4</td>
-                        <td>hola4</td>
-                        <td>hola4</td>
-                        <td>hola4</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Punto de equilibrio</td>
-                        <td>hola5</td>
-                        <td>hola5</td>
-                        <td>hola5</td>
-                        <td>hola5</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Costo de adquisición</td>
-                        <td>hola6</td>
-                        <td>hola6</td>
-                        <td>hola6</td>
-                        <td>hola6</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>Por colección</td>
-                        <td>hola7</td>
-                        <td>hola7</td>
-                        <td>hola7</td>
-                        <td>hola7</td>
-                    </tr>
+                    {tableResult.map(function (element, i) {
+                        return (<tr>
+                            <td>{i + 1}</td>
+                            <td>{element[0]}</td>
+                            <td>{element[1]}</td>
+                            <td>{element[2]}</td>
+                            <td>{element[3]}</td>
+                            <td>{element[4]}</td>
+                        </tr>)
+                    })}
                 </tbody>
                 <tfoot>
 

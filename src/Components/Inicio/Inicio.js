@@ -2,10 +2,12 @@ import React from "react";
 import './Inicio.css'
 import { InicioUI } from "./InicioUI";
 
-function Inicio() {
+function Inicio(
+    { lastYearSales, setLastYearSales,
+        unitPrice, setUnitPrice }
+) {
 
-    const [lastYearSales, setLastYearSales] = React.useState(0);
-    const [unitPrice, setUnitPrice] = React.useState(0);
+
 
     const [lastYearUnitsSold, setLastYearUnitsSold] = React.useState(0);
 
@@ -28,7 +30,7 @@ function Inicio() {
     const onChangeLastYearUnitsSold = function (lastYearSalesProp, unitPriceProp) {
         let result = (lastYearSalesProp / unitPriceProp).toFixed(10);
 
-        result = new Intl.NumberFormat("es-CO",{maximumFractionDigits: 0, roundingIncrement: 5}).format(result);
+        result = new Intl.NumberFormat("es-CO", { maximumFractionDigits: 0, roundingIncrement: 5 }).format(result);
 
 
         setLastYearUnitsSold((v) => (
