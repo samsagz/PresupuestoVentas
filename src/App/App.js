@@ -18,6 +18,9 @@ function App() {
   const [breakeven, setBreakeven] = React.useState(50000000); //"Punto de equilibrio"
   const [acquisitionCost, setAcquisitionCost] = React.useState(60000000);
   const [byCollection, setByCollection] = React.useState(70000000);
+  const [avg, setAverage] = React.useState(0);
+  const [max, setMaximum] = React.useState(0);
+  const [min, setMinimum] = React.useState(0);
 
 
 
@@ -41,6 +44,12 @@ function App() {
       setAcquisitionCost={setAcquisitionCost}
       byCollection={byCollection}
       setByCollection={setByCollection}
+      avg={avg}
+      setAverage={setAverage}
+      max={max}
+      setMaximum={setMaximum}
+      min={min}
+      setMinimum={setMinimum}
     />
   );
 }

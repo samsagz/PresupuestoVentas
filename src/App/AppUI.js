@@ -10,7 +10,10 @@ function AppUI(
         clientDetail, setClientDetail,
         breakeven, setBreakeven,
         acquisitionCost, setAcquisitionCost,
-        byCollection, setByCollection }) {
+        byCollection, setByCollection,
+        avg, setAverage,
+        max, setMaximum,
+        min, setMinimum }) {
     return (
         <React.Fragment>
             <h1>PASO 1: VENTAS ANUALES ¿cuánto vas a vender en el año?</h1>
@@ -30,6 +33,12 @@ function AppUI(
                 breakeven={breakeven}
                 acquisitionCost={acquisitionCost}
                 byCollection={byCollection}
+                avg={avg}
+                max={max}
+                min={min}
+                setAverage={setAverage}
+                setMaximum={setMaximum}
+                setMinimum={setMinimum}
             />
         </React.Fragment>
     );
