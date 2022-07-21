@@ -8,8 +8,8 @@ import { AppUI } from "./AppUI";
 
 function App() {
 
-  const [lastYearSales, setLastYearSales] = React.useState(0);
-  const [unitPrice, setUnitPrice] = React.useState(0);
+  const [lastYearSales, setLastYearSales] = React.useState(1000000);
+  const [unitPrice, setUnitPrice] = React.useState(50000);
 
   const [whatIWant, setWhatIWant] = React.useState(10000000);
   const [whatIGuess, setWhatIGuess] = React.useState(20000000);

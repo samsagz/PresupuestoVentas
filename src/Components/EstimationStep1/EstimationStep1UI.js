@@ -2,7 +2,8 @@ import React from "react";
 import "./EstimationStep1.css"
 
 function EstimationStep1UI({ tableResult, avg, max, min }) {
-    let formatting = new Intl.NumberFormat("es-CO", { maximumFractionDigits: 0, roundingIncrement: 5 });
+    const formatting = new Intl.NumberFormat("es-CO", { maximumFractionDigits: 0, roundingIncrement: 5 });
+    const percentFormatting = new Intl.NumberFormat("es-CO", { style: 'percent', maximumFractionDigits: 2, roundingIncrement: 5 });
 
     return (
         <React.Fragment>
@@ -22,12 +23,12 @@ function EstimationStep1UI({ tableResult, avg, max, min }) {
                 </thead>
                 <tbody>
                     {tableResult.map(function (element, i) {
-                        return (<tr>
+                        return (<tr key={i}>
                             <td>{i + 1}</td>
                             <td>{element[0]}</td>
                             <td>{formatting.format(element[1])}</td>
                             <td>{formatting.format(element[2])}</td>
-                            <td>{element[3]}</td>
+                            <td>{percentFormatting.format(element[3])}</td>
                             <td>{formatting.format(element[4])}</td>
                         </tr>)
                     })}
