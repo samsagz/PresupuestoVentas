@@ -15,12 +15,11 @@ function Guess({ lastYearSales, whatIGuess, setWhatIGuess }) {
         setWhatIGuess((v) => (lastYearSales + parseInt(increaseValue)));
     }
     const onChangePercentageIncreaseSalesValue = function (event) {
-        console.log(event.target.value);
-        console.log(event.target.validity.valid);
         const percentage = event.target.value;
 
         console.log(percentage);
-        if (event.target.validity.valid) {
+        // eslint-disable-next-line
+        if (Number(percentage) == percentage) {
             setPercentageWhatIWantToIncrease((v) => (percentage));
             setWhatIWantToIncrease((v) => (lastYearSales * percentage));
 
